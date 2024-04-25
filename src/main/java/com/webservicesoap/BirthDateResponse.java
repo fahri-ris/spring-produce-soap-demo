@@ -8,6 +8,8 @@
 
 package com.webservicesoap;
 
+import lombok.Builder;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -15,6 +17,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.Date;
 
 
 /**
@@ -52,7 +55,7 @@ public class BirthDateResponse {
     protected String fullName;
     @XmlElement(required = true)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar birthDate;
+    protected Date birthDate;
 
     /**
      * Gets the value of the id property.
@@ -102,7 +105,7 @@ public class BirthDateResponse {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
@@ -114,7 +117,7 @@ public class BirthDateResponse {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setBirthDate(XMLGregorianCalendar value) {
+    public void setBirthDate(Date value) {
         this.birthDate = value;
     }
 
