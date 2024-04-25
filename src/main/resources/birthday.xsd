@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.webservicesoap.com"
+           xmlns:tns="http://www.webservicesoap.com"
+           elementFormDefault="qualified">
+
+<!--    target namespace diatas bebas mau apa saja -->
+
+    <xs:element name="birthdayRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="day" type="xs:int" />
+                <xs:element name="month" type="xs:int" />
+                <xs:element name="year" type="xs:int" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="birthdayNameRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fullName" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ageResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="age" type="xs:int" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="birthDateResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long" />
+                <xs:element name="fullName" type="xs:string" />
+                <xs:element name="birthDate" type="xs:date" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
